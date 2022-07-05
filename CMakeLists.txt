@@ -2,7 +2,7 @@
 
 project ("DenoiserExample")
 
-add_executable (DenoiserExample "src/main.cpp"    "src/utility.h")
+add_executable (DenoiserExample "src/main.cpp"    "src/utility.h" "src/denoiser.cpp" "src/denoiser.h" "src/utility.cpp")
 
 target_include_directories(DenoiserExample PRIVATE ${PROJECT_SOURCE_DIR}/external)
 
