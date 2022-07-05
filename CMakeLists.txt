@@ -2,7 +2,10 @@
 
 project ("DenoiserExample")
 
-add_executable (DenoiserExample "main.cpp"    "utility.h")
+add_executable (DenoiserExample "src/main.cpp"    "src/utility.h")
+
+target_include_directories(DenoiserExample PRIVATE ${PROJECT_SOURCE_DIR}/external)
+
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET DenoiserExample PROPERTY CXX_STANDARD 20)
