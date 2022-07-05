@@ -35,7 +35,6 @@ applyInverseSimpleTonemap(const utility::Color& color)
     };
 }
 
-// true if succeeded.
 utility::Image
 denoise(
     const utility::Image& colorImage,

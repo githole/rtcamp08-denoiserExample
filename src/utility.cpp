@@ -18,6 +18,7 @@ Image loadHDRImage(const char* filename)
     const float* data{ stbi_loadf(filename, &image.width, &image.height, &component, reqComponent) };
     if (!data)
     {
+        std::cout << "Load failed: " << filename << std::endl;
         return {};
     }
     const size_t elementCount{ (size_t)reqComponent * image.width * image.height };
