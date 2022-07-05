@@ -21,3 +21,26 @@
 ## normal.hdr
 法線が格納されたリニアHDR画像。
 画像上の値のレンジは[0.0, 1.0]となっている。各RGB値について、2倍して1を引いて[-1.0, 1.0]のレンジにマッピングすることでワールド空間における法線(x, y, z)を得ることが出来る。
+
+# ビルド方法
+適切にgitやcmake、VisualStudioなどがインストールされていれば、以下のコマンドを上から順に実行することでビルドからサンプル画像のデノイズまで一通り行うことが出来る。
+
+## git
+```
+git clone https://github.com/githole/rtcamp08-denoiserExample.git
+cd rtcamp08-denoiserExample
+git submodule update --init
+```
+## cmake を用いてビルド
+```
+mkdir build
+cd build
+cmake ..
+cmake --build . --config Release
+```
+
+## exe を実行
+```
+cd Release
+DenoiserExample.exe ../../assets/color.hdr ../../assets/albedo.hdr ../../assets/normal.hdr denoised.hdr
+```
