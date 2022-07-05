@@ -51,9 +51,9 @@ denoise(
     constexpr float s1_2{ 0.1f };
     constexpr float s2_2{ 0.01f };
 
+#pragma omp parallel for schedule(dynamic, 1)
     for (int iy{ 0 }; iy < colorImage.height; ++iy)
     {
-#pragma omp parallel for schedule(dynamic, 1)
         for (int ix{ 0 }; ix < colorImage.width; ++ix)
         {
             const auto color{ colorImage.load(ix, iy) };
