@@ -47,7 +47,7 @@ denoise(
 
     constexpr int K{ 8 };
     constexpr float s0_2{ 16.0f };
-    constexpr float s1_2{ 0.1f };
+    constexpr float s1_2{ 0.01f };
     constexpr float s2_2{ 0.01f };
 
 #pragma omp parallel for schedule(dynamic, 1)

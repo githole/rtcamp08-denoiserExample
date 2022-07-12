@@ -42,5 +42,5 @@ cmake --build . --config Release
 ## exe を実行
 ```
 cd Release
-DenoiserExample.exe ../../assets/color.hdr ../../assets/albedo.hdr ../../assets/normal.hdr denoised.hdr
+DenoiserExample.exe ../../assets/cornell_64spp/color.hdr ../../assets/cornell_64spp/albedo.hdr ../../assets/cornell_64spp/normal.hdr denoised.hdr
 ```
